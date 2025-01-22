@@ -15,8 +15,7 @@ router.post("/questions", async (req, res) => {
         // Search the database for questions matching the query
         const results = await Question.find({
             title: { $regex: search, $options: "i" }, // Search by title (case-insensitive),
-            t
-            ype: {$regex : type1, $options:"i"}
+            type: {$regex : type1, $options:"i"}
         })
             .skip(pageNumber * itemsPerPage) // Pagination: skip documents
             .limit(itemsPerPage); // Limit results
