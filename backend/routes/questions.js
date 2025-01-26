@@ -5,6 +5,7 @@ const questions = require("../config/speakx_questions.json"); // JSON data
 // Search questions endpoint
 router.post("/questions", async (req, res) => {
     try {
+        console.log('request came2');
         const { query, page = 1, limit = 10 ,type} = req.body;
         
         const type1 = type || "";
