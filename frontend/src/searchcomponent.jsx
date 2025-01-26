@@ -9,7 +9,7 @@ const SearchComponent = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/questions`, {
+        const response = await fetch(`https://mc-qsearch-z7a3.vercel.app/api/questions`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -34,7 +34,7 @@ const SearchComponent = () => {
 
   const NextPage = async() =>{
       try{
-        const response = await fetch(`http://localhost:8080/api/questions`, {
+        const response = await fetch(`https://mc-qsearch-z7a3.vercel.app/api/questions`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const SearchComponent = () => {
 
     
     try{
-      const response = await fetch(`http://localhost:8080/api/questions`, {
+      const response = await fetch(`https://mc-qsearch-z7a3.vercel.app/api/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const SearchComponent = () => {
     console.log("Form submitted");
     // Add additional search handling logic if needed
     try{
-      const response = await fetch(`http://localhost:8080/api/questions`, {
+      const response = await fetch(`https://mc-qsearch-z7a3.vercel.app/api/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -112,7 +112,8 @@ const SearchComponent = () => {
     console.log("Form submitted");
     // Add additional search handling logic if needed
     try{
-      const response = await fetch(`http://localhost:8080/api/questions`, {
+    
+      const response = await fetch(`https://mc-qsearch-z7a3.vercel.app/api/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
