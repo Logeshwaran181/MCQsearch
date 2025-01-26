@@ -11,6 +11,7 @@ body {
 }
 
 
+
   .question-title{
     font-size:14px;
     color:black;
@@ -27,12 +28,14 @@ body {
   }
   .page-number{
     font-size:15px;
-    color:black;
+    color:rgb(223, 223, 223);
 
   }
+  
   #hide{
     background-color:gray;
     cursor:not-allowed;
+    color:white;
     
   }
   #type{
@@ -45,13 +48,17 @@ body {
   .page-button{
 
     padding:10px 20px;
-    color:white;
-    background-color: #333;
+    color:black;
+    font-weight: bold;
+    background-color: #ffffff;
     box-shadow: 1px 2px 1px 2px gray;
     transition: 0.3s;
   }
   .page-button:hover{
-    background-color: #4CAF50;
+    background-color: rgb(121, 101, 135);
+    color:white;
+    box-shadow: 1px 2px 1px 2px rgb(213, 213, 213);
+    transform: translateY(-3px);
     border:none;
     transition: 0.3s;
   }
@@ -110,6 +117,11 @@ body {
     min-width:90vw;
   }
 
+  .search-container2{
+    min-width:90vw;
+    margin:40px;
+    margin-top:0px;
+  }
   .search-input{
     color:#040404
   }
@@ -122,8 +134,20 @@ body {
     color: #040404;
   }
   
+  .webname-title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
   /* Search Bar */
   .search-bar {
+    
+    
+    height:110px;
+   
+    /* border:1px solid white; */
+    width:100%;
+    z-index:10000;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,7 +196,7 @@ body {
   }
   
   .search-results h3 {
-    color: #333;
+    color: white;
     margin-bottom: 10px;
   }
   
@@ -199,6 +223,39 @@ body {
     margin-top: 10px;
   }
 
+  /* loading.css */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  top:0px;
+  left:-30px;
+  width:100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+.solution h3{
+  color:black;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+  
   @media screen and (max-width:775px) {
     /* .search-bar{
       display:flex;
